@@ -9,15 +9,11 @@ public class PlayerFollow : MonoBehaviour {
     public float cameraHeight = 18.0f;
     private Vector3 currentPosition;
 
-    private void Start()
-    {
-    }
-
     void Update () {
         if (player)
         {
             currentPosition = new Vector3(player.position.x, cameraHeight, player.position.z);
-            cam.SetPositionAndRotation(currentPosition, Quaternion.EulerAngles(1.57079632f, 0.0f, 0.0f));
+			cam.SetPositionAndRotation(currentPosition, Quaternion.Euler(90.0f, 0.0f, 0.0f));
         }
 	}
 }
